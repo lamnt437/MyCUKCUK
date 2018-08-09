@@ -7,15 +7,6 @@
     font-weight: bold
 }
 
-/*.wrap-control {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0
-}*/
-
-
 /*HEADER PART*/
 #header {
     background-color: #0072bc;
@@ -94,92 +85,68 @@
     right: 0px;
 }
 
-/*FOOTER PART*/
-#footer {
-    background-color: #f2f2f2;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 146px;
-    z-index: 1;
-    text-align: center;
-}
-
-
-
-#login-content {
+#login-container {
     padding-top: 10px;
+    position: relative;
+    top: 7px;
+    right: 25px;
 }
 
 .head-title {
     color: #0072bc;
     font-family: Tahoma;
     font-size: 18px;
-    padding-left: 105px;
     text-transform: uppercase;
-}
-
-.table-login tr td.textRight {
-    padding-right: 10px;
-    text-align: right
-}
-
-.table-login td {
-    padding: 2px 0
-}
-
-.table-login input[type="password"], .table-login .text-input {
-    border: solid 1px #abc1de;
-    padding: 5px 5px 5px 29px;
-    margin: 1px 0 1px 0;
-    color: #000
-}
-
-.table-login a {
-    text-decoration: none;
-    color: #0072bc;
-    text-decoration: underline;
 }
 
 #icon-user {
     width: 24px;
     height: 18px;
     position: absolute;
-    top: 4px;
-    left: 6px;
     background-image: url('../Image/iconLogin.png');
     background-size: auto;
     background-position: 0px 4px;
     background-repeat: no-repeat;
+    margin-top: 6px;
+    margin-left: 6px;
 }
 
 #icon-pw {
     width: 24px;
     height: 18px;
     position: absolute;
-    top: 7px;
-    left: 6px;
     background-image: url('../Image/iconLogin.png');
     background-size: auto;
     background-position: 0px -13px;
     background-repeat: no-repeat;
+    margin-top: 9px;
+    margin-left: 6px;
 }
 
 input {
     background-color: white;
     cursor: text;
     font-size: 16px;
-    padding: 1px;
+    padding: 2px;
     border-width: 2px;
     border-style: inset;
     border-color: initial;
     border-image: initial;
     font: 400 11.6px Arial;
     text-align: left;
+    width: 185px;
+}
+
+input[type="password"], input[type="text"] {
+    border: solid 1px #abc1de;
+    padding: 5px 5px 5px 29px;
+    margin: 3px 0;
+    color: #000;
+    height: 18px;
 }
 
 .login-button {
+    cursor: pointer;
     padding: 10px 0;
     background-color: #0072bc;
     color: #fff;
@@ -191,14 +158,32 @@ input {
     text-align: center;
 }
 
+#login-form a {
+    color: #0072bc;
+    text-decoration: underline;
+}
+
 .c1 {
     width: 100px;
     text-align: right;
     padding-right: 8px;
+    font-weight: bold;
 }
 
 .c2 {
     width: 185px;
+}
+
+/*FOOTER PART*/
+#footer {
+    background-color: #f2f2f2;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 146px;
+    z-index: 1;
+    text-align: center;
 }
 
 #support {
