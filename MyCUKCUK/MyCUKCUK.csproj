@@ -74,6 +74,7 @@
     <Content Include="Content\Image\iconLogin.png" />
     <Content Include="Content\Image\logoCukCuk.png" />
     <Content Include="Index.html" />
+    <Content Include="Temp.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
