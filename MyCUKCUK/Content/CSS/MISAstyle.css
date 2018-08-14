@@ -99,6 +99,10 @@
     text-transform: uppercase;
 }
 
+.login-status{
+    color: red;
+}
+
 #icon-user {
     width: 24px;
     height: 18px;

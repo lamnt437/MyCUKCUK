@@ -9,7 +9,7 @@
     <div id="header">
         <div id="logo"></div>
         <div class="cbo-lang" style="float:left">
-            <select class="lang-select">
+            <select id="lang-selector" class="lang-select">
                 <option value="vietnamese">Tiếng Việt (Vietnamese)</option>
                 <option value="english">Tiếng Anh (English)</option>
                 <option value="germany">Tiếng Đức (Germany)</option>
@@ -29,7 +29,7 @@
                         <tbody>
                             <tr>
                                 <td class="c1"></td>
-                                <td class="c2 head-title">ĐĂNG NHẬP CUKCUK.VN</td>
+                                <td id="login-title" class="c2 head-title">ĐĂNG NHẬP CUKCUK.VN</td>
                             </tr>
                             <tr>
                                 <td class="c1"></td>
@@ -57,7 +57,7 @@
                             <tr>
                                 <td class="c1"></td>
                                 <td class="c2">
-                                    <input class="login-button" type="submit" name="login" value="ĐĂNG NHẬP" />
+                                    <input id="login-buttonID" class="login-button" type="submit" name="login" value="ĐĂNG NHẬP" />
                                 </td>
                             </tr>
                             <tr>
@@ -65,6 +65,10 @@
                                 <td class="c2">
                                     <a href="https://demohaisan4mua.cukcuk.vn/View/Public/ResetPassword.aspx">Quên mật khẩu?</a>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td class="c1"></td>
+                                <td class="c2"><span id="lang-info"></span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -91,5 +95,7 @@
             <a href="www.misa.com.vn">www.misa.com.vn</a>
         </div>
     </div>
+    <script src="Script/jquery-3.3.1.js"></script>
+    <script src="Script/MISAscript.js"></script>
 </body>
 </html>
