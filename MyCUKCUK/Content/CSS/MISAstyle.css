@@ -101,6 +101,7 @@
 
 .login-status{
     color: red;
+    margin-left: -25px;
 }
 
 #icon-user {

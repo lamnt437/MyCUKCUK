@@ -1,8 +1,6 @@
 ﻿$(".password-status").hide();
 $(".username-status").hide();
 $("#lang-selector").val("vietnamese");
-$("#lang-info").text($("#lang-selector").val());
-var $insertedElm = "<li><em>Hello, world</em></li>";
 
 $("#lang-selector").change(function () {
     if ($("#lang-selector").val() === "english") {
@@ -22,11 +20,7 @@ $("#lang-selector").change(function () {
 $("#login-buttonID").click(function () {
     $(".password-status").hide();
     $(".username-status").hide();
-    //$("ul").prepend($insertedElm);
-    //$("#mid").css({
-    //    'background-color': 'black',
-    //    'font-family':'Courier'
-    //});
+
     var username = $("#username-input").val();
     var password = $("#password-input").val();
 
