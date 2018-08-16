@@ -34,6 +34,7 @@ $("#login-buttonID").click(function () {
         if (username.trim() === "admin") {
             if (password.trim() === "12345678") {
                 $(".username-status").show().text("Đăng nhập thành công!");
+                show();
             }
             else {
                 $(".username-status").show().text("Mật khẩu sai");
@@ -43,4 +44,5 @@ $("#login-buttonID").click(function () {
             $(".username-status").show().text("Tên đăng nhập không tồn tại trong hệ thống!");
         }
     }
-})
+});
+
