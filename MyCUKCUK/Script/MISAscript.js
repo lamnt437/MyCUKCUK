@@ -1,48 +1,25 @@
-﻿$(".password-status").hide();
-$(".username-status").hide();
-$("#lang-selector").val("vietnamese");
+﻿//Thông báo nhập thiếu thông tin
 
-$("#lang-selector").change(function () {
-    if ($("#lang-selector").val() === "english") {
-        $("#login-title").text("login cukcuk.vn");
-        $("#login-buttonID").val("LOGIN");
-    }
-    else if ($("#lang-selector").val() === "vietnamese") {
-        $("#login-title").text("đăng nhập cukcuk.vn");
-        $("#login-buttonID").val("ĐĂNG NHẬP");
-    }
-    else {
-        $("#login-title").text("einloggen cukcuk.vn");
-        $("#login-buttonID").val("EINLOGGEN");
-    }
-})
-
-$("#login-buttonID").click(function () {
-    $(".password-status").hide();
-    $(".username-status").hide();
-
-    var username = $("#username-input").val();
-    var password = $("#password-input").val();
-
-    if (username.trim() === "") {
-        $(".username-status").show().text("Bạn phải nhập tên đăng nhập");
-    }
-    if (password.trim() === "") {
-        $(".password-status").show().text("Bạn phải nhập mật khẩu");
-    }
-    if (username.trim() !== "" && password.trim() !== "") {
-        if (username.trim() === "admin") {
-            if (password.trim() === "12345678") {
-                $(".username-status").show().text("Đăng nhập thành công!");
-                show();
-            }
-            else {
-                $(".username-status").show().text("Mật khẩu sai");
-            }
+$('#login-buttonID').click(function () {
+    $('.status-list').empty();
+    var $inputChecked = $('[requiredInput="true"]');
+    $inputChecked.each(function () {
+        var inputValue = $(this).val().trim();
+        var outputStatus = '<li>' + $(this).attr('inputInfo') + ' không được để trống</li>';
+        if (inputValue.length === 0) {
+            $('.status-list').append(outputStatus);
         }
-        else {
-            $(".username-status").show().text("Tên đăng nhập không tồn tại trong hệ thống!");
-        }
-    }
+    });
 });
 
+//Kiểm tra thông tin yêu cầu nhập
+
+$('[requiredInput="true"]').blur(function () {
+        var inputValue = $(this).val().trim();
+        if (inputValue.length === 0) {
+            $(this).addClass('input-warning');
+        }
+        else {
+            $(this).removeClass('input-warning');
+        }
+});
